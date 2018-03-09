@@ -95,9 +95,9 @@ public class LoginController {
         return "/login/login";
     }
 
-    @RequestMapping(value = "/unbound")
+    @RequestMapping(value = "/logout")
     @ResponseBody
-    public String unbound(HttpServletRequest request,
+    public String loginOut(HttpServletRequest request,
                           HttpServletResponse response){
         ApiResult<Boolean>  apiResult = new ApiResult<>(CommonCode.ERROR);
 

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>${page_title}</title>
+    #parse("/templates/layout/common-var.vm")
+    #include("/templates/layout/css.vm")
+    #include("/templates/layout/javascripts.vm")
+</head>
+<body>
+    $screen_content
+</body>
+</html>

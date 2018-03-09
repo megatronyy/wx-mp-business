@@ -1,0 +1,6 @@
+#set($DIST_JS_PATH="/dist/js")
+#set($DIST_CSS_PATH="/dist/css")
+#set($DIST_CSS_LIB="/dist/lib")
+#set($SRC_JS_PATH="/src/js")
+#set($SRC_CSS_PATH="/src/css")
+#set($SRC_CSS_LIB="/src/lib")
