@@ -1,42 +1,9 @@
 spring:
   application:
-    name: quwb-wx-shop-fang
-#  cloud:
-#    config:
-#      profile: dev
-#      label: dev
-#      uri: http://localhost:11200/
-  datasource:
-    name: test
-    url: jdbc:mysql://192.168.3.10:3306/news?characterEncoding=utf8&useSSL=false
-    username: root
-    password: 1qaz@WSX
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    filters: stat
-    maxActive: 20
-    initialSize: 1
-    maxWait: 60000
-    minIdle: 1
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxOpenPreparedStatements: 20
-
-#  redis:
-#      sentinel:
-#        master: mymaster
-#        nodes: 172.16.0.118:26379,172.16.0.118:26380,172.16.0.118:26381
-
-
-
+    name: wx-mp-business
 
 server:
-  port: 8094
+  port: 8010
   session-timeout : 1000000 #用户回话session过期时间，以秒为单位
   tomcat:
     #context-path: /xycar
@@ -47,22 +14,6 @@ server:
 endpoints.shutdown:
   enabled: true
   sensitive: false
-mybatis:
-    type-aliases-package: com.quwb.web.entity
-    mapper-locations: classpath:mapper/**.xml
-
-mapper:
-  mappers:
-    -com.quwb.web.repository.mysql.dao.BaseDao
-  not-empty: false
-  identity: MYSQL
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
-
 
 management:
   health:
@@ -76,12 +27,6 @@ management:
       enabled: false
     mail:
       enabled: false
-    mongo:
-      enabled: false
-    rabbit:
-      enabled: true
-    redis:
-      enabled: true
   add-application-context-header: false
 eureka:
   client:
@@ -89,7 +34,7 @@ eureka:
       enable: true
     registryFetchIntervalSeconds: 30
     serviceUrl:
-      defaultZone: http://192.168.3.133:11100/eureka/
+      defaultZone: http://192.168.0.119:8761/eureka/
 #      defaultZone: http://localhost:11100/eureka/
   instance:
     lease-expiration-duration-in-seconds: 90

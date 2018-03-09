@@ -46,11 +46,11 @@ public class HomeController {
                         HttpServletRequest request) {
         try{
             String strUser = CookieManager.getInstance().getCookie(request, CookieKeys.LOGIN);
-            AccountEntity accountEntity = JSON.parseObject(URLDecoder.decode(strUser, "utf-8"), AccountEntity.class);
+            /*AccountEntity accountEntity = JSON.parseObject(URLDecoder.decode(strUser, "utf-8"), AccountEntity.class);
             modelMap.put("account_name", accountEntity.getAccountName());
             modelMap.put("account_type", accountEntity.getAccountTypeName());
             modelMap.put("account_phone", accountEntity.getAccountPhone());
-            modelMap.put("dealer_name", accountEntity.getDealerFullName());
+            modelMap.put("dealer_name", accountEntity.getDealerFullName());*/
         }catch (Exception ex){
             logger.error(String.format("字符集转换异常，异常信息：%s", ex.toString()));
             return "redirect:/login/login";
