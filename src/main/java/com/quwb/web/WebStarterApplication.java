@@ -33,6 +33,7 @@ public class WebStarterApplication extends SpringBootServletInitializer {
             SpringApplicationBuilder application) {
         return application.sources(WebStarterApplication.class);
     }
+
     @Bean
     @LoadBalanced
     RestTemplate restTemplate() {
