@@ -1,0 +1,101 @@
+spring:
+  application:
+    name: quwb-wx-shop-fang
+#  cloud:
+#    config:
+#      profile: dev
+#      label: dev
+#      uri: http://localhost:11200/
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.3.10:3306/news?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1qaz@WSX
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+#  redis:
+#      sentinel:
+#        master: mymaster
+#        nodes: 172.16.0.118:26379,172.16.0.118:26380,172.16.0.118:26381
+
+
+
+
+server:
+  port: 8094
+  session-timeout : 1000000 #用户回话session过期时间，以秒为单位
+  tomcat:
+    #context-path: /xycar
+    #access-log-enabled: true
+    #basedir: ${logging.path}
+    uri-encoding: UTF-8
+
+endpoints.shutdown:
+  enabled: true
+  sensitive: false
+mybatis:
+    type-aliases-package: com.quwb.web.entity
+    mapper-locations: classpath:mapper/**.xml
+
+mapper:
+  mappers:
+    -com.quwb.web.repository.mysql.dao.BaseDao
+  not-empty: false
+  identity: MYSQL
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+management:
+  health:
+    solr:
+      enabled: false
+    db:
+      enabled: false
+    elasticsearch:
+      enabled: false
+    jms:
+      enabled: false
+    mail:
+      enabled: false
+    mongo:
+      enabled: false
+    rabbit:
+      enabled: true
+    redis:
+      enabled: true
+  add-application-context-header: false
+eureka:
+  client:
+    healthcheck:
+      enable: true
+    registryFetchIntervalSeconds: 30
+    serviceUrl:
+      defaultZone: http://192.168.3.133:11100/eureka/
+#      defaultZone: http://localhost:11100/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 90
+    leaseRenewalIntervalInSeconds: 30
+    preferIpAddress: true
+weixin:
+  appid: wx2b43d0e8d64222a8
+  appsecret: f3dfcdcd992c72151c0398bf5d453031
+  token: wenbin528
