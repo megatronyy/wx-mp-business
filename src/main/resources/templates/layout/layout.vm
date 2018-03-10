@@ -10,7 +10,13 @@
 <body ontouchstart>
     <div class="page">
         <div class="page-hd">
-
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="placeholder">
+                        <img class="header_img" src="$IMAGE_PATH/web/banner.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="page-bd">
             $screen_content

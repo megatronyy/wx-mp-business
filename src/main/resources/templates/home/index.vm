@@ -1,13 +1,28 @@
 #set($page_title="惠商机-首页")
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
-测试测试测试<br/>
+#parse("/templates/layout/common.vm")
+<div class="weui-grids">
+    <a href="javascript:;" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="$IMAGE_PATH/web/main2.jpg" alt="">
+        </div>
+        <p class="weui-grid__label">
+            发布商铺
+        </p>
+    </a>
+    <a href="javascript:;" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="$IMAGE_PATH/web/main3.jpg" alt="">
+        </div>
+        <p class="weui-grid__label">
+            订阅商铺
+        </p>
+    </a>
+    <a href="javascript:;" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="$IMAGE_PATH/web/main1.jpg" alt="">
+        </div>
+        <p class="weui-grid__label">
+            我的信息
+        </p>
+    </a>
+</div>
