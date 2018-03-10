@@ -3,11 +3,21 @@
 <head>
     <meta name="viewport" content="width=device-width"/>
     <title>${page_title}</title>
-    #parse("/templates/layout/common-var.vm")
-    #include("/templates/layout/css.vm")
-    #include("/templates/layout/javascripts.vm")
+    #parse("/templates/layout/common.vm")
+    #parse("/templates/layout/css.vm")
+    #parse("/templates/layout/javascripts.vm")
 </head>
-<body>
-    $screen_content
+<body ontouchstart>
+    <div class="page">
+        <div class="page-hd">
+
+        </div>
+        <div class="page-bd">
+            $screen_content
+        </div>
+        <div class="page-ft">
+            #parse("/templates/layout/footer.vm")
+        </div>
+    </div>
 </body>
 </html>
