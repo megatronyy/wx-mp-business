@@ -8,22 +8,23 @@
     #parse("/templates/layout/javascripts.vm")
 </head>
 <body ontouchstart>
-    <div class="page">
-        <div class="page-hd">
-            <div class="weui-flex">
-                <div class="weui-flex__item">
-                    <div class="placeholder">
-                        <img class="header_img" src="$IMAGE_PATH/web/banner.jpg" alt="" />
-                    </div>
+<div class="page">
+    <div class="page-hd">
+        <div class="weui-flex">
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <img class="header_img" src="$IMAGE_PATH/web/banner.jpg" alt=""/>
                 </div>
             </div>
         </div>
-        <div class="page-bd">
-            $screen_content
-        </div>
-        <div class="page-ft">
-            #parse("/templates/layout/footer.vm")
-        </div>
     </div>
+    <div class="page-bd">
+        $screen_content
+    </div>
+    <div class="page-ft">
+
+    </div>
+</div>
+    #parse("/templates/layout/footer.vm")
 </body>
 </html>
