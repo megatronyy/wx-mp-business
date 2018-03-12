@@ -1,3 +1,4 @@
 #set($JS_PATH="/business/js")
-#set($CSS_PATH="/business/style")
+#set($CSS_PATH="/business/css")
+#set($LIB_PATH="/business/lib")
 #set($IMAGE_PATH="/business/images")

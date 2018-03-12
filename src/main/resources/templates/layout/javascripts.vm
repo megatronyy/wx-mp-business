@@ -1,3 +1,0 @@
-#parse("/templates/layout/common.vm")
-<script src="$JS_PATH/zepto.min.js" type="text/javascript"></script>
-<script src="$JS_PATH/weui.js" type="text/javascript"></script>

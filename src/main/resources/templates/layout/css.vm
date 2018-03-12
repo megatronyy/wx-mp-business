@@ -1,3 +1,0 @@
-#parse("/templates/layout/common.vm")
-<link rel="stylesheet" href="$CSS_PATH/weui.css">
-<link rel="stylesheet" href="$CSS_PATH/business.css">
