@@ -28,6 +28,18 @@
     </a>
 </div>
 
+<div class="wy-ind-news">
+    <i class="news-icon-laba"></i>
+    <div class="swiper-container swiper-news swiper-container-vertical">
+        <div class="swiper-wrapper" style="transform: translate3d(0px, -3456px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" style="height: 1152px;"><a href="news_info.html">蓝之蓝股份成公司上市</a></div>
+            <div class="swiper-slide" data-swiper-slide-index="0" style="height: 1152px;"><a href="news_info.html">热烈祝贺伟义商城成功热烈祝贺伟义商城成功上线热烈祝贺伟义商城成功上线上线</a></div>
+            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="height: 1152px;"><a href="news_info.html">蓝之蓝股份成公司上市</a></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="height: 1152px;"><a href="news_info.html">热烈祝贺伟义商城成功热烈祝贺伟义商城成功上线热烈祝贺伟义商城成功上线上线</a></div></div>
+        <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+    </div>
+    <a href="news_list.html" class="newsmore"><i class="news-icon-more"></i></a>
+</div>
+
 <div class="weui-panel weui-panel_access">
     <div class="weui-panel__hd">最新商机</div>
     <div class="weui-panel__bd">
@@ -66,3 +78,13 @@
         </a>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $(".swiper-news").swiper({
+            loop: true,
+            direction: 'vertical',
+            paginationHide :true,
+            autoplay: 30000
+        });
+    });
+</script>

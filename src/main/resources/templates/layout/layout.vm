@@ -4,27 +4,56 @@
     <meta name="viewport" content="width=device-width"/>
     <title>${page_title}</title>
     #parse("/templates/layout/common.vm")
-    #parse("/templates/layout/css.vm")
-    #parse("/templates/layout/javascripts.vm")
+    <link rel="stylesheet" href="$LIB_PATH/weui.css">
+    <link rel="stylesheet" href="$CSS_PATH/jquery-weui.css">
+    <link rel="stylesheet" href="$CSS_PATH/business.css">
+    <link rel="stylesheet" href="$CSS_PATH/style.css">
 </head>
 <body ontouchstart>
-<div class="page">
-    <div class="page-hd">
-        <div class="weui-flex">
-            <div class="weui-flex__item">
-                <div class="placeholder">
-                    <img class="header_img" src="$IMAGE_PATH/web/banner.jpg" alt=""/>
-                </div>
-            </div>
+<!--顶部搜索-->
+<header class="weui-header">
+    <!--顶部轮播-->
+    <div class="swiper-container swiper-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="pro_info.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="pro_list.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="pro_info.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="pro_list.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
-    <div class="page-bd">
-        $screen_content
-    </div>
-    <div class="page-ft">
+</header>
 
-    </div>
+<!--主体-->
+<div class="weui-content">
+    $screen_content
 </div>
-    #parse("/templates/layout/footer.vm")
+
+<!--底部导航-->
+<div class="foot-black"></div>
+<div class="weui-tabbar wy-foot-menu">
+    <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+        <div class="weui-tabbar__icon  foot-menu-home"></div>
+        <p class="weui-tabbar__label">首页</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon foot-menu-cart"></div>
+        <p class="weui-tabbar__label">我的商机</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon foot-menu-member"></div>
+        <p class="weui-tabbar__label">关于我们</p>
+    </a>
+</div>
+<script src="$Lib_PATH/jquery-2.1.4.js" type="text/javascript"></script>
+<script src="$JS_PATH/jquery-weui.js" type="text/javascript"></script>
+<script src="$JS_PATH/swiper.js" type="text/javascript"></script>
+<script src="$Lib_PATH/fastclick.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(".swiper-banner").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+</script>
 </body>
 </html>
