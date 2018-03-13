@@ -19,10 +19,10 @@
     <!--顶部轮播-->
     <div class="swiper-container swiper-banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="pro_info.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
-            <div class="swiper-slide"><a href="pro_list.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
-            <div class="swiper-slide"><a href="pro_info.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
-            <div class="swiper-slide"><a href="pro_list.html"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="#"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="#"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="#"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href="#"><img src="$IMAGE_PATH/web/banner.jpg"/></a></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -34,25 +34,7 @@
 </div>
 
 <!--底部导航-->
-<div class="foot-black"></div>
-<div class="weui-tabbar wy-foot-menu">
-    <a href="/business/home/index" class="weui-tabbar__item weui-bar__item_on">
-        <div class="weui-tabbar__icon  foot-menu-home"></div>
-        <p class="weui-tabbar__label">首页</p>
-    </a>
-    <a href="javascript:;" class="weui-tabbar__item">
-        <div class="weui-tabbar__icon foot-menu-list"></div>
-        <p class="weui-tabbar__label">商机中心</p>
-    </a>
-    <a href="javascript:;" class="weui-tabbar__item">
-        <div class="weui-tabbar__icon foot-menu-cart"></div>
-        <p class="weui-tabbar__label">我的商机</p>
-    </a>
-    <a href="/business/my/mine" class="weui-tabbar__item">
-        <div class="weui-tabbar__icon foot-menu-member"></div>
-        <p class="weui-tabbar__label">关于我们</p>
-    </a>
-</div>
+#include("/templates/layout/footer.vm")
 
 <script type="text/javascript">
     $(".swiper-banner").swiper({
