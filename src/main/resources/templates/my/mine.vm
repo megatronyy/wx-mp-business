@@ -6,7 +6,7 @@
 <div class='weui-content'>
     <div class="wy-center-top">
         <div class="weui-media-box weui-media-box_appmsg">
-            <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="upload/headimg.jpg" alt="">
+            <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="$IMAGE_PATH/web/headimg.jpg" alt="">
             </div>
             <div class="weui-media-box__bd">
                 <h4 class="weui-media-box__title user-name">飞翔的小土豆</h4>
@@ -142,7 +142,7 @@
                         </div>
                         <span class="weui-cell__ft"></span>
                     </a>
-                    <a class="weui-cell weui-cell_access" href="password.html">
+                    <a class="weui-cell weui-cell_access" href="/business/login/change">
                         <div class="weui-cell__hd"><img src="$IMAGE_PATH/web/center-icon-dlmm.png" alt=""
                                                         class="center-list-icon"></div>
                         <div class="weui-cell__bd weui-cell_primary">
@@ -150,7 +150,7 @@
                         </div>
                         <span class="weui-cell__ft"></span>
                     </a>
-                    <a class="weui-cell weui-cell_access" href="login.html">
+                    <a class="weui-cell weui-cell_access" href="/business/login/login">
                         <div class="weui-cell__hd"><img src="$IMAGE_PATH/web/center-icon-out.png" alt=""
                                                         class="center-list-icon"></div>
                         <div class="weui-cell__bd weui-cell_primary">
@@ -167,11 +167,11 @@
 <!--底部导航-->
 <div class="foot-black"></div>
 <div class="weui-tabbar wy-foot-menu">
-    <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+    <a href="/business/home/index" class="weui-tabbar__item">
         <div class="weui-tabbar__icon  foot-menu-home"></div>
         <p class="weui-tabbar__label">首页</p>
     </a>
-    <a href="classify.html" class="weui-tabbar__item">
+    <a href="javascript:;" class="weui-tabbar__item">
         <div class="weui-tabbar__icon foot-menu-list"></div>
         <p class="weui-tabbar__label">商机中心</p>
     </a>
@@ -179,7 +179,7 @@
         <div class="weui-tabbar__icon foot-menu-cart"></div>
         <p class="weui-tabbar__label">我的商机</p>
     </a>
-    <a href="javascript:;" class="weui-tabbar__item">
+    <a href="/business/my/mine" class="weui-tabbar__item weui-bar__item_on">
         <div class="weui-tabbar__icon foot-menu-member"></div>
         <p class="weui-tabbar__label">关于我们</p>
     </a>

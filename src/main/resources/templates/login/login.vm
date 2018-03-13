@@ -24,8 +24,8 @@
         </form>
     </div>
     <div class="forgets">
-        <a href="/login/change">忘记密码？</a>
-        <a href="/login/regist">免费注册</a>
+        <a href="/business/login/change">忘记密码？</a>
+        <a href="/business/login/regist">免费注册</a>
     </div>
 </div>
 

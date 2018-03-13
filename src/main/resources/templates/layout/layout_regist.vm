@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="$CSS_PATH/jquery-weui.css">
     <link rel="stylesheet" href="$CSS_PATH/style.css">
 </head>
-<body ontouchstart style="background:#323542;">
+<body ontouchstart>
 
     $screen_content
 

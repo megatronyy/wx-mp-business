@@ -1,4 +1,4 @@
-#set($layout="/templates/layout/layout_login.vm")
+#set($layout="/templates/layout/layout_regist.vm")
 #set($page_title="惠商机-手机注册")
 #parse("/templates/layout/common.vm")
 
