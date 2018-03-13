@@ -4,7 +4,7 @@
 
 <!--主体-->
 <header class="wy-header">
-    <div class="wy-header-icon-back"><span></span></div>
+    <div class="wy-header-icon-back" onclick="javascript:window.history.go(-1);"><span></span></div>
     <div class="wy-header-title">密码修改</div>
 </header>
 <div class="weui-content">

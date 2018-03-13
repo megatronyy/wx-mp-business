@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="$CSS_PATH/jquery-weui.css">
     <link rel="stylesheet" href="$CSS_PATH/business.css">
     <link rel="stylesheet" href="$CSS_PATH/style.css">
+    <script src="$LIB_PATH/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="$JS_PATH/jquery-weui.js" type="text/javascript"></script>
+    <script src="$JS_PATH/swiper.js" type="text/javascript"></script>
+    <script src="$LIB_PATH/fastclick.js" type="text/javascript"></script>
 </head>
 <body ontouchstart>
 <!--顶部搜索-->
@@ -49,10 +53,7 @@
         <p class="weui-tabbar__label">关于我们</p>
     </a>
 </div>
-<script src="$LIB_PATH/jquery-2.1.4.js" type="text/javascript"></script>
-<script src="$JS_PATH/jquery-weui.js" type="text/javascript"></script>
-<script src="$JS_PATH/swiper.js" type="text/javascript"></script>
-<script src="$LIB_PATH/fastclick.js" type="text/javascript"></script>
+
 <script type="text/javascript">
     $(".swiper-banner").swiper({
         loop: true,

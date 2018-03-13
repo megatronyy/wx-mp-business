@@ -6,8 +6,6 @@
 <div class='weui-content'>
     <div class="wy-center-top">
         <div class="weui-media-box weui-media-box_appmsg">
-            <div class="weui-media-box__hd"><img class="weui-media-box__thumb radius" src="$IMAGE_PATH/web/headimg.jpg" alt="">
-            </div>
             <div class="weui-media-box__bd">
                 <h4 class="weui-media-box__title user-name">飞翔的小土豆</h4>
                 <p class="user-grade">等级：普通会员</p>

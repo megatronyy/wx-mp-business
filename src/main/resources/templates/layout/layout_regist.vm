@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="$LIB_PATH/weui.css">
     <link rel="stylesheet" href="$CSS_PATH/jquery-weui.css">
     <link rel="stylesheet" href="$CSS_PATH/style.css">
+    <script src="$LIB_PATH/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="$JS_PATH/jquery-weui.js" type="text/javascript"></script>
+    <script src="$LIB_PATH/fastclick.js" type="text/javascript"></script>
+    <script src="$JS_PATH/jquery.Spinner.js" type="text/javascript"></script>
 </head>
 <body ontouchstart>
-
     $screen_content
-
-<script src="$LIB_PATH/jquery-2.1.4.js" type="text/javascript"></script>
-<script src="$JS_PATH/jquery-weui.js" type="text/javascript"></script>
-<script src="$LIB_PATH/fastclick.js" type="text/javascript"></script>
-<script src="$JS_PATH/jquery.Spinner.js" type="text/javascript"></script>
 <script>
     $(function() {
         FastClick.attach(document.body);
