@@ -84,10 +84,10 @@ public class LoginController {
 
             }
             //设置登录信息
-            if(this.login(userInfo, openId, response)){
+            /*if(this.login(userInfo, openId, response)){
                 this.setMicroShopUser(userInfo, openId, nickName);
                 return "redirect:/home/index";
-            }
+            }*/
         } catch (Exception ex) {
             logger.error(String.format("用code换取access_token异常，异常信息：%s", ex.toString()));
         }
@@ -102,6 +102,18 @@ public class LoginController {
         ApiResult<Boolean>  apiResult = new ApiResult<>(CommonCode.ERROR);
 
         return apiResult.toString();
+    }
+
+    @RequestMapping(value = "/regist")
+    public String regist(HttpServletRequest request,
+                         HttpServletResponse response){
+        return "/login/regist";
+    }
+
+    @RequestMapping(value = "/change")
+    public String change(HttpServletRequest request,
+                         HttpServletResponse response){
+        return "/login/psd_chage";
     }
 
     private Boolean login(String userInfo, String openId, HttpServletResponse response) {
