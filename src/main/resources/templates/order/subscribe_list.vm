@@ -1,0 +1,40 @@
+#set($layout="/templates/layout/layout.vm")
+#set($page_title="惠商机-商机订阅列表")
+#parse("/templates/layout/common.vm")
+
+<div class="weui-panel address-box">
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text address-list-box">
+            <a href="/business/order/subscribe" class="address-edit"></a>
+            <h4 class="weui-media-box__title"><span>陈大鹏</span><span>189****3850</span></h4>
+            <p class="weui-media-box__desc address-txt">宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼</p>
+            <span class="default-add">默认地址</span>
+        </div>
+    </div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text address-list-box">
+            <a href="/business/order/subscribe" class="address-edit"></a>
+            <h4 class="weui-media-box__title"><span>陈大鹏</span><span>189****3850</span></h4>
+            <p class="weui-media-box__desc address-txt">宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼</p>
+        </div>
+    </div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text address-list-box">
+            <a href="/business/order/subscribe" class="address-edit"></a>
+            <h4 class="weui-media-box__title"><span>陈大鹏</span><span>189****3850</span></h4>
+            <p class="weui-media-box__desc address-txt">宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼</p>
+        </div>
+    </div>
+    <div class="weui-panel__bd">
+        <div class="weui-media-box weui-media-box_text address-list-box">
+            <a href="/business/order/subscribe" class="address-edit"></a>
+            <h4 class="weui-media-box__title"><span>陈大鹏</span><span>189****3850</span></h4>
+            <p class="weui-media-box__desc address-txt">宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼宿迁市洋河新区电商产业园2楼</p>
+        </div>
+    </div>
+
+</div>
+<div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" href="/business/order/subscribe" id="showTooltips">添加商机订阅</a>
+</div>
+

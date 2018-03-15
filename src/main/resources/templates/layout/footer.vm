@@ -8,7 +8,7 @@
         <div class="weui-tabbar__icon foot-menu-list"></div>
         <p class="weui-tabbar__label">商机中心</p>
     </a>
-    <a href="javascript:;" class="weui-tabbar__item" id="threeMenu">
+    <a href="/business/order/list" class="weui-tabbar__item" id="threeMenu">
         <div class="weui-tabbar__icon foot-menu-cart"></div>
         <p class="weui-tabbar__label">我的订阅</p>
     </a>
@@ -26,8 +26,8 @@
                 activeMenu("firstMenu");
             }else if(strUrl.indexOf("/fang") > -1){
                 activeMenu("secMenu");
-            }else if(strUrl.indexOf("/fang") > -1){
-                activeMenu("secMenu");
+            }else if(strUrl.indexOf("/order") > -1){
+                activeMenu("threeMenu");
             }else if(strUrl.indexOf("/my") > -1){
                 activeMenu("fourMenu");
             }

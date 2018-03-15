@@ -1,0 +1,51 @@
+#set($layout="/templates/layout/layout_regist.vm")
+#set($page_title="惠商机-订阅商机")
+#parse("/templates/layout/common.vm")
+
+<!--主体-->
+<header class="wy-header">
+    <div class="wy-header-icon-back" onclick="javascript:window.history.go(-1);"><span></span></div>
+    <div class="wy-header-title">订阅商机</div>
+</header>
+<div class="weui-content">
+    <div class="weui-cells weui-cells_form wy-address-edit">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label wy-lab">订阅人</label></div>
+            <div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="陈大鹏"></div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label wy-lab">手机号</label></div>
+            <div class="weui-cell__bd"><input class="weui-input" type="number" pattern="[0-9]*" placeholder="18951263540"></div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="name" class="weui-label wy-lab">所在地区</label></div>
+            <div class="weui-cell__bd"><input class="weui-input" id="address" type="text" value="湖北省 武汉市 武昌区" readonly="" data-code="420106" data-codes="420000,420100,420106"></div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label wy-lab">详细描述</label></div>
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="洋河新区电商产业园2楼东侧最里面第二间办公室"></textarea>
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_switch">
+            <div class="weui-cell__bd">设为默认订阅</div>
+            <div class="weui-cell__ft"><input class="weui-switch" type="checkbox"></div>
+        </div>
+    </div>
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">保存此订阅</a>
+    </div>
+
+</div>
+
+<script src="$JS_PATH/city-picker.js"></script>
+<script>
+    $(function(){
+        $("#address").cityPicker({
+            title: "选择出发地",
+            onChange: function (picker, values, displayValues) {
+                console.log(values, displayValues);
+            }
+        });
+    });
+</script>
