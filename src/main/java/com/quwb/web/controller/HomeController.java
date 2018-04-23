@@ -1,12 +1,16 @@
 package com.quwb.web.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.quwb.web.client.IUserServicesClient;
+import com.quwb.web.common.CommonCode;
 import com.quwb.web.constant.CookieKeys;
 import com.quwb.web.entity.AccountEntity;
 import com.quwb.web.weixin.WeiXinService;
 import com.quwb.web.utils.CookieManager;
 import com.quwb.web.utils.SHAUtil;
 import com.quwb.web.weixin.WxMpPropertyConfig;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +40,9 @@ public class HomeController {
     @Autowired
     WxMpPropertyConfig wxMpPropertyConfig;
 
+    @Autowired
+    IUserServicesClient userServicesClient;
+
     /**
      * @author quwb
      * @create 2018-02-27 17:45
@@ -51,6 +58,16 @@ public class HomeController {
             modelMap.put("account_type", accountEntity.getAccountTypeName());
             modelMap.put("account_phone", accountEntity.getAccountPhone());
             modelMap.put("dealer_name", accountEntity.getDealerFullName());*/
+
+            String ret = userServicesClient.getAnnounceListByUserId(100000);
+            if(!StringUtils.isNotEmpty(ret)){
+                JSONObject jsonObject = JSON.parseObject(ret);
+                Integer retCode = jsonObject.getInteger("code");
+                if(retCode == CommonCode.SUCCESS.getKey()){
+                    modelMap.put("data", jsonObject.getString("data"));
+                }
+            }
+
         }catch (Exception ex){
             logger.error(String.format("字符集转换异常，异常信息：%s", ex.toString()));
             return "redirect:/login/login";

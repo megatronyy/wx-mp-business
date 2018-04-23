@@ -21,13 +21,18 @@
     <div class="swiper-container swiper-news swiper-container-vertical">
         <div class="swiper-wrapper" style="transform: translate3d(0px, -3456px, 0px); transition-duration: 0ms;">
             <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1"
-                 style="height: 1152px;"><a href="news_info.html">蓝之蓝股份成公司上市</a></div>
-            <div class="swiper-slide" data-swiper-slide-index="0" style="height: 1152px;"><a href="/business/notice/list">热烈祝贺惠商机成功上线</a>
+                 style="height: 1152px;">
+                <a href="news_info.html">蓝之蓝股份成公司上市</a>
             </div>
-            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="height: 1152px;"><a
-                    href="/business/notice/list">祝贺晨创科技股份公司上市</a></div>
-            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0"
-                 style="height: 1152px;"><a href="/business/notice/list">热烈祝贺惠商机成功上线</a></div>
+            <div class="swiper-slide" data-swiper-slide-index="0" style="height: 1152px;">
+                <a href="/business/notice/list">热烈祝贺惠商机成功上线</a>
+            </div>
+            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="height: 1152px;">
+                <a href="/business/notice/list">祝贺晨创科技股份公司上市</a>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0"  style="height: 1152px;">
+                <a href="/business/notice/list">热烈祝贺惠商机成功上线</a>
+            </div>
         </div>
         <div class="swiper-pagination swiper-pagination-bullets"><span
                 class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span

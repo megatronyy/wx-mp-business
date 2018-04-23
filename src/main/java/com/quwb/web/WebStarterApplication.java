@@ -15,15 +15,15 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by yang on 2017/1/9.
+ * Created by quwb on 2017/1/9.
  */
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableFeignClients
 @EnableAspectJAutoProxy
-@ComponentScan("com.quwb")
+@ComponentScan("com.quwb.web")
 @EnableAsync
 public class WebStarterApplication extends SpringBootServletInitializer {
     @Override

@@ -204,6 +204,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.14</version>
+				<configuration>
+					<dockerHost>http://192.168.0.119:2375</dockerHost>
+					<imageName>fang/${project.artifactId}:${project.version}</imageName>
+					<forceTags>true</forceTags>
+					<baseImage>docker.io/tomcat</baseImage>
+					<entryPoint>["/usr/local/tomcat/bin/catalina.sh", "run"]</entryPoint>
+					<resources>
+						<resource>
+							<targetPath>/usr/local/tomcat/webapps</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.war</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
