@@ -3,7 +3,7 @@ spring:
     name: wx-mp-business
 
 server:
-  port: 8010
+  port: 8080
   session-timeout : 1000000 #用户回话session过期时间，以秒为单位
   tomcat:
     #context-path: /xycar
@@ -35,11 +35,12 @@ eureka:
     registryFetchIntervalSeconds: 30
     serviceUrl:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
-#      defaultZone: http://localhost:11100/eureka/
+
   instance:
     lease-expiration-duration-in-seconds: 90
     leaseRenewalIntervalInSeconds: 30
-    preferIpAddress: true
+    prefer-ip-address: true
+    ip-address: 192.168.0.110
 weixin:
   appid: wx2b43d0e8d64222a8
   appsecret: f3dfcdcd992c72151c0398bf5d453031

@@ -60,7 +60,7 @@ public class HomeController {
             modelMap.put("dealer_name", accountEntity.getDealerFullName());*/
 
             String ret = userServicesClient.getAnnounceListByUserId(100000);
-            if(!StringUtils.isNotEmpty(ret)){
+            if(StringUtils.isNotEmpty(ret)){
                 JSONObject jsonObject = JSON.parseObject(ret);
                 Integer retCode = jsonObject.getInteger("code");
                 if(retCode == CommonCode.SUCCESS.getKey()){
