@@ -1,5 +1,6 @@
 package com.quwb.web;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
@@ -16,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableAspectJAutoProxy
 @ComponentScan("com.quwb.web")
+@MapperScan("com.quwb.web.mapper")
 @EnableAsync
 public class WebStarterApplication extends SpringBootServletInitializer {
     @Override
@@ -28,6 +30,7 @@ public class WebStarterApplication extends SpringBootServletInitializer {
     RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
     public static void main(String[] args) {
         new SpringApplicationBuilder(WebStarterApplication.class).web(true).run(args);
     }

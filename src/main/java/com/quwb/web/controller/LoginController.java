@@ -4,11 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.quwb.web.config.velocity.SiteUtility;
 import com.quwb.web.constant.CookieKeys;
-import com.quwb.web.entity.MicroShopUserEntity;
 import com.quwb.web.weixin.WeiXinService;
 import com.quwb.web.common.ApiResult;
 import com.quwb.web.common.CommonCode;
-import com.quwb.web.entity.AccountEntity;
 import com.quwb.web.utils.CookieManager;
 import me.chanjar.weixin.mp.bean.result.WxMpOAuth2AccessToken;
 import me.chanjar.weixin.mp.bean.result.WxMpUser;
@@ -24,8 +22,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.Calendar;
 import java.util.Date;
 

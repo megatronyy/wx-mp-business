@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quwb.web.mapper.AnnounceMapper">
+  <resultMap id="BaseResultMap" type="com.quwb.web.entity.Announce">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="UserId" jdbcType="INTEGER" property="userid" />
+    <result column="Context" jdbcType="NVARCHAR" property="context" />
+    <result column="CreateTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="IsRead" jdbcType="SMALLINT" property="isread" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    Id, UserId, Context, CreateTime, IsRead
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ShopHouse.dbo.Announce
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getAnnounceListByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select top 5
+    <include refid="Base_Column_List" />
+    from ShopHouse.dbo.Announce
+    where UserId = #{userId,jdbcType=INTEGER}
+    order by id desc
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ShopHouse..Announce
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.quwb.web.entity.Announce">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SQL_Server
+    </selectKey>
+    insert into ShopHouse..Announce (UserId, Context, CreateTime, 
+      IsRead)
+    values (#{userid,jdbcType=INTEGER}, #{context,jdbcType=NVARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{isread,jdbcType=SMALLINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.quwb.web.entity.Announce">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SQL_Server
+    </selectKey>
+    insert into ShopHouse..Announce
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        UserId,
+      </if>
+      <if test="context != null">
+        Context,
+      </if>
+      <if test="createtime != null">
+        CreateTime,
+      </if>
+      <if test="isread != null">
+        IsRead,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="context != null">
+        #{context,jdbcType=NVARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isread != null">
+        #{isread,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.quwb.web.entity.Announce">
+    update ShopHouse..Announce
+    <set>
+      <if test="userid != null">
+        UserId = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="context != null">
+        Context = #{context,jdbcType=NVARCHAR},
+      </if>
+      <if test="createtime != null">
+        CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isread != null">
+        IsRead = #{isread,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.quwb.web.entity.Announce">
+    update ShopHouse..Announce
+    set UserId = #{userid,jdbcType=INTEGER},
+      Context = #{context,jdbcType=NVARCHAR},
+      CreateTime = #{createtime,jdbcType=TIMESTAMP},
+      IsRead = #{isread,jdbcType=SMALLINT}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

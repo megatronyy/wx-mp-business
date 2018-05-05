@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quwb.web.mapper.UserDataMapper">
+    <resultMap id="UserDataResultMap" type="com.quwb.web.entity.UserData">
+        <id column="UserID" jdbcType="INTEGER" property="userid" />
+        <result column="UserName" jdbcType="NVARCHAR" property="username" />
+        <result column="OpenID" jdbcType="NVARCHAR" property="openid" />
+        <result column="Password" jdbcType="NVARCHAR" property="password" />
+        <result column="Mobile" jdbcType="CHAR" property="mobile" />
+        <result column="LastLoginTime" jdbcType="TIMESTAMP" property="lastlogintime" />
+        <collection property="userShopRela" column="UserID"
+                    select="com.quwb.web.mapper.UserShopRelaMapper.selectByUserId" />
+        <collection property="customizations" column="UserID"
+                    select="com.quwb.web.mapper.CustomizationMapper.selectByUserId" />
+    </resultMap>
+    <select id="getUserData" parameterType="java.util.Map" resultMap="UserDataResultMap">
+        SELECT UserID,
+               UserName ,
+               OpenID ,
+               Password ,
+               Mobile ,
+               LastLoginTime
+        FROM   dbo.UserAccount ( NOLOCK )
+        WHERE UserID=#{userid,jdbcType=INTEGER}
+    </select>
+</mapper>

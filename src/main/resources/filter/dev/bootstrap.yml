@@ -1,6 +1,28 @@
 spring:
   application:
     name: wx-mp-business
+  datasource:
+    name: shop
+    url: jdbc:sqlserver://192.168.0.115:1433;DatabaseName=ShopHouse
+    username: 'sa'
+    password: 'qu90()op'
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+    filters: stat
+    maxActive: 200
+    initialSize: 50
+    maxWait: 2000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
 
 server:
   port: 8080
@@ -14,6 +36,10 @@ server:
 endpoints.shutdown:
   enabled: true
   sensitive: false
+
+mybatis:
+    type-aliases-package: com.quwb.web.entity
+    mapper-locations: classpath*:mybatis/mapper/**.xml
 
 #management:
 #  health:
