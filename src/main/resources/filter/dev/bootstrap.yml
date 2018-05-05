@@ -15,32 +15,32 @@ endpoints.shutdown:
   enabled: true
   sensitive: false
 
-management:
-  health:
-    solr:
-      enabled: false
-    db:
-      enabled: false
-    elasticsearch:
-      enabled: false
-    jms:
-      enabled: false
-    mail:
-      enabled: false
-  add-application-context-header: false
-eureka:
-  client:
-    healthcheck:
-      enable: true
-    registryFetchIntervalSeconds: 30
-    serviceUrl:
-      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
-
-  instance:
-    lease-expiration-duration-in-seconds: 90
-    leaseRenewalIntervalInSeconds: 30
-    prefer-ip-address: true
-    ip-address: 192.168.0.110
+#management:
+#  health:
+#    solr:
+#      enabled: false
+#    db:
+#      enabled: false
+#    elasticsearch:
+#      enabled: false
+#    jms:
+#      enabled: false
+#    mail:
+#      enabled: false
+#  add-application-context-header: false
+#eureka:
+#  client:
+#    healthcheck:
+#      enable: true
+#    registryFetchIntervalSeconds: 30
+#    serviceUrl:
+#      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+#
+#  instance:
+#    lease-expiration-duration-in-seconds: 90
+#    leaseRenewalIntervalInSeconds: 30
+#    prefer-ip-address: true
+#    ip-address: 192.168.0.110
 weixin:
   appid: wx2b43d0e8d64222a8
   appsecret: f3dfcdcd992c72151c0398bf5d453031

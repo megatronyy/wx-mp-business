@@ -2,10 +2,8 @@ package com.quwb.web.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.quwb.web.client.IUserServicesClient;
 import com.quwb.web.common.CommonCode;
 import com.quwb.web.constant.CookieKeys;
-import com.quwb.web.entity.AccountEntity;
 import com.quwb.web.weixin.WeiXinService;
 import com.quwb.web.utils.CookieManager;
 import com.quwb.web.utils.SHAUtil;
@@ -21,7 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.net.URLDecoder;
 import java.util.ArrayList;
 
 /**
@@ -40,9 +37,6 @@ public class HomeController {
     @Autowired
     WxMpPropertyConfig wxMpPropertyConfig;
 
-    @Autowired
-    IUserServicesClient userServicesClient;
-
     /**
      * @author quwb
      * @create 2018-02-27 17:45
@@ -59,7 +53,7 @@ public class HomeController {
             modelMap.put("account_phone", accountEntity.getAccountPhone());
             modelMap.put("dealer_name", accountEntity.getDealerFullName());*/
 
-            String ret = userServicesClient.getAnnounceListByUserId(100000);
+            String ret = "";
             if(StringUtils.isNotEmpty(ret)){
                 JSONObject jsonObject = JSON.parseObject(ret);
                 Integer retCode = jsonObject.getInteger("code");
