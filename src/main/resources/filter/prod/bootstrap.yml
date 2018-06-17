@@ -40,6 +40,7 @@ eureka:
     lease-expiration-duration-in-seconds: 90
     leaseRenewalIntervalInSeconds: 30
     prefer-ip-address: true
+    ip-address: 192.168.0.119
 weixin:
   appid: wx2b43d0e8d64222a8
   appsecret: f3dfcdcd992c72151c0398bf5d453031

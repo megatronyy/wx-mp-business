@@ -185,7 +185,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.14</version>
 				<configuration>
-					<dockerHost>http://192.168.0.119:2375</dockerHost>
+					<dockerHost>http://192.168.0.216:2375</dockerHost>
 					<imageName>fang/${project.artifactId}:${project.version}</imageName>
 					<forceTags>true</forceTags>
 					<baseImage>docker.io/tomcat</baseImage>

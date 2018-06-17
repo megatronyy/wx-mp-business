@@ -1,0 +1,6 @@
+version: "2"
+services:
+  quwb-wx-mp:
+    image: fang/microservice-comsumer:0.0.1-SNAPSHOT
+    ports:
+      - "9000:9000"
