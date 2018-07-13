@@ -34,5 +34,4 @@ public class WebStarterApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         new SpringApplicationBuilder(WebStarterApplication.class).web(true).run(args);
     }
-
 }
