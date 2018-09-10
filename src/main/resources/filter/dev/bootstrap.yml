@@ -3,10 +3,10 @@ spring:
     name: wx-mp-business
   datasource:
     name: shop
-    url: jdbc:sqlserver://192.168.0.115:1433;DatabaseName=ShopHouse
-    username: 'sa'
-    password: 'qu90()op'
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:mysql://192.168.0.106:3306/tenant-demo?useUnicode=true&characterEncoding=utf-8
+    username: 'root'
+    password: 'QU90()op'
+    driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     useGlobalDataSourceStat: true
